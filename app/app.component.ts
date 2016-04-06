@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
-import {CoursesComponent} from './courses.component';
-import {AuthorsComponent} from './authors.component';
-import {FavoriteComponent} from './favorite.component';
-import {LikeComponent} from './like.component';
-import {VoterComponent} from './voter.component';
+import {CoursesComponent} from './courses/courses.component';
+import {AuthorsComponent} from './authors/authors.component';
+import {FavoriteComponent} from './favorite/favorite.component';
+import {LikeComponent} from './like/like.component';
+import {VoterComponent} from './voter/voter.component';
 
 @Component({
   selector: 'my-app',
