@@ -5,6 +5,7 @@ import {FavoriteComponent} from './favorite/favorite.component';
 import {LikeComponent} from './like/like.component';
 import {VoterComponent} from './voter/voter.component';
 import {TweetsComponent} from './twitter/tweets.component';
+import {ZippyComponent} from './zippy/zippy.component';
 
 @Component({
   selector: 'my-app',
@@ -18,6 +19,9 @@ import {TweetsComponent} from './twitter/tweets.component';
       <like [iLike]="tweet.iLike" [totalLikes]="tweet.totalLikes"></like>
       <voter [voteCount]="subject.voteCount" [myVote]="subject.myVote" (vote)="onVote($event)"></voter>
       <tweets></tweets>
+      <zippy title="This is the title">
+        Here is the content
+      </zippy>
     </div>
   `,
   directives: [
@@ -26,7 +30,8 @@ import {TweetsComponent} from './twitter/tweets.component';
     FavoriteComponent,
     LikeComponent,
     VoterComponent,
-    TweetsComponent
+    TweetsComponent,
+    ZippyComponent
   ]
 })
 export class AppComponent {
