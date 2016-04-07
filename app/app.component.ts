@@ -4,19 +4,30 @@ import {AuthorsComponent} from './authors/authors.component';
 import {FavoriteComponent} from './favorite/favorite.component';
 import {LikeComponent} from './like/like.component';
 import {VoterComponent} from './voter/voter.component';
+import {TweetsComponent} from './twitter/tweets.component';
 
 @Component({
   selector: 'my-app',
   template: `
-    <h1>My First Angular 2 App</h1>
-    <courses></courses>
-    <authors></authors>
-    <i class="glyphicon glyphicon-star"></i>
-    <favorite [is-favorite]="isFavorite" (change)="onChange($event)"></favorite>
-    <like [iLike]="tweet.iLike" [totalLikes]="tweet.totalLikes"></like>
-    <voter [voteCount]="subject.voteCount" [myVote]="subject.myVote" (vote)="onVote($event)"></voter>
+    <div class="container-fluid">
+      <h1>My First Angular 2 App</h1>
+      <courses></courses>
+      <authors></authors>
+      <i class="glyphicon glyphicon-star"></i>
+      <favorite [is-favorite]="isFavorite" (change)="onChange($event)"></favorite>
+      <like [iLike]="tweet.iLike" [totalLikes]="tweet.totalLikes"></like>
+      <voter [voteCount]="subject.voteCount" [myVote]="subject.myVote" (vote)="onVote($event)"></voter>
+      <tweets></tweets>
+    </div>
   `,
-  directives: [CoursesComponent, AuthorsComponent, FavoriteComponent, LikeComponent, VoterComponent]
+  directives: [
+    CoursesComponent,
+    AuthorsComponent,
+    FavoriteComponent,
+    LikeComponent,
+    VoterComponent,
+    TweetsComponent
+  ]
 })
 export class AppComponent {
   isFavorite = true;
