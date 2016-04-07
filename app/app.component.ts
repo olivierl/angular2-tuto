@@ -6,19 +6,27 @@ import {LikeComponent} from './like/like.component';
 import {VoterComponent} from './voter/voter.component';
 import {TweetsComponent} from './twitter/tweets.component';
 import {ZippyComponent} from './zippy/zippy.component';
+import {SubscriptionForm} from './subscription-form/subscription-form.component';
 
 @Component({
   selector: 'my-app',
   template: `
     <div class="container-fluid">
       <h1>My First Angular 2 App</h1>
+      <hr>
+      <subscription-form></subscription-form>
+      <hr>
       <courses></courses>
       <authors></authors>
-      <i class="glyphicon glyphicon-star"></i>
+      <hr>
       <favorite [is-favorite]="isFavorite" (change)="onChange($event)"></favorite>
+      <hr>
       <like [iLike]="tweet.iLike" [totalLikes]="tweet.totalLikes"></like>
+      <hr>
       <voter [voteCount]="subject.voteCount" [myVote]="subject.myVote" (vote)="onVote($event)"></voter>
+      <hr>
       <tweets></tweets>
+      <hr>
       <zippy title="This is the title">
         Here is the content
       </zippy>
@@ -31,7 +39,8 @@ import {ZippyComponent} from './zippy/zippy.component';
     LikeComponent,
     VoterComponent,
     TweetsComponent,
-    ZippyComponent
+    ZippyComponent,
+    SubscriptionForm
   ]
 })
 export class AppComponent {
