@@ -11,34 +11,34 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var SubscriptionForm;
+    var SubscriptionFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            SubscriptionForm = (function () {
-                function SubscriptionForm() {
+            SubscriptionFormComponent = (function () {
+                function SubscriptionFormComponent() {
                     this.frequencies = [
                         { id: 1, label: 'Daily' },
                         { id: 2, label: 'Weekly' },
                         { id: 3, label: 'Monthly' }
                     ];
                 }
-                SubscriptionForm.prototype.onSubscribe = function (form) {
+                SubscriptionFormComponent.prototype.onSubscribe = function (form) {
                     console.log(form.value);
                 };
-                SubscriptionForm = __decorate([
+                SubscriptionFormComponent = __decorate([
                     core_1.Component({
                         selector: 'subscription-form',
                         templateUrl: 'app/subscription-form/subscription-form.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], SubscriptionForm);
-                return SubscriptionForm;
+                ], SubscriptionFormComponent);
+                return SubscriptionFormComponent;
             }());
-            exports_1("SubscriptionForm", SubscriptionForm);
+            exports_1("SubscriptionFormComponent", SubscriptionFormComponent);
         }
     }
 });

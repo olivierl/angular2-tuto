@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses/courses.component', './authors/authors.component', './favorite/favorite.component', './like/like.component', './voter/voter.component', './twitter/tweets.component', './zippy/zippy.component', './subscription-form/subscription-form.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses/courses.component', './authors/authors.component', './favorite/favorite.component', './like/like.component', './voter/voter.component', './twitter/tweets.component', './zippy/zippy.component', './subscription-form/subscription-form.component', './change-password-form/change-password-form.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses/courses.component', './authors/auth
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, favorite_component_1, like_component_1, voter_component_1, tweets_component_1, zippy_component_1, subscription_form_component_1;
+    var core_1, courses_component_1, authors_component_1, favorite_component_1, like_component_1, voter_component_1, tweets_component_1, zippy_component_1, subscription_form_component_1, change_password_form_component_1;
     var AppComponent;
     return {
         setters:[
@@ -40,6 +40,9 @@ System.register(['angular2/core', './courses/courses.component', './authors/auth
             },
             function (subscription_form_component_1_1) {
                 subscription_form_component_1 = subscription_form_component_1_1;
+            },
+            function (change_password_form_component_1_1) {
+                change_password_form_component_1 = change_password_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -63,7 +66,7 @@ System.register(['angular2/core', './courses/courses.component', './authors/auth
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <div class=\"container-fluid\">\n      <h1>My First Angular 2 App</h1>\n      <hr>\n      <subscription-form></subscription-form>\n      <hr>\n      <courses></courses>\n      <authors></authors>\n      <hr>\n      <favorite [is-favorite]=\"isFavorite\" (change)=\"onChange($event)\"></favorite>\n      <hr>\n      <like [iLike]=\"tweet.iLike\" [totalLikes]=\"tweet.totalLikes\"></like>\n      <hr>\n      <voter [voteCount]=\"subject.voteCount\" [myVote]=\"subject.myVote\" (vote)=\"onVote($event)\"></voter>\n      <hr>\n      <tweets></tweets>\n      <hr>\n      <zippy title=\"This is the title\">\n        Here is the content\n      </zippy>\n    </div>\n  ",
+                        template: "\n    <div class=\"container-fluid\">\n      <h1>My First Angular 2 App</h1>\n      <hr>\n      <change-password-form></change-password-form>\n      <hr>\n      <subscription-form></subscription-form>\n      <hr>\n      <courses></courses>\n      <authors></authors>\n      <hr>\n      <favorite [is-favorite]=\"isFavorite\" (change)=\"onChange($event)\"></favorite>\n      <hr>\n      <like [iLike]=\"tweet.iLike\" [totalLikes]=\"tweet.totalLikes\"></like>\n      <hr>\n      <voter [voteCount]=\"subject.voteCount\" [myVote]=\"subject.myVote\" (vote)=\"onVote($event)\"></voter>\n      <hr>\n      <tweets></tweets>\n      <hr>\n      <zippy title=\"This is the title\">\n        Here is the content\n      </zippy>\n    </div>\n  ",
                         directives: [
                             courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
@@ -72,7 +75,8 @@ System.register(['angular2/core', './courses/courses.component', './authors/auth
                             voter_component_1.VoterComponent,
                             tweets_component_1.TweetsComponent,
                             zippy_component_1.ZippyComponent,
-                            subscription_form_component_1.SubscriptionForm
+                            subscription_form_component_1.SubscriptionFormComponent,
+                            change_password_form_component_1.ChangePasswordFormComponent
                         ]
                     }), 
                     __metadata('design:paramtypes', [])

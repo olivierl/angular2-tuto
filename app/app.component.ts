@@ -6,13 +6,16 @@ import {LikeComponent} from './like/like.component';
 import {VoterComponent} from './voter/voter.component';
 import {TweetsComponent} from './twitter/tweets.component';
 import {ZippyComponent} from './zippy/zippy.component';
-import {SubscriptionForm} from './subscription-form/subscription-form.component';
+import {SubscriptionFormComponent} from './subscription-form/subscription-form.component';
+import {ChangePasswordFormComponent} from './change-password-form/change-password-form.component';
 
 @Component({
   selector: 'my-app',
   template: `
     <div class="container-fluid">
       <h1>My First Angular 2 App</h1>
+      <hr>
+      <change-password-form></change-password-form>
       <hr>
       <subscription-form></subscription-form>
       <hr>
@@ -40,7 +43,8 @@ import {SubscriptionForm} from './subscription-form/subscription-form.component'
     VoterComponent,
     TweetsComponent,
     ZippyComponent,
-    SubscriptionForm
+    SubscriptionFormComponent,
+    ChangePasswordFormComponent
   ]
 })
 export class AppComponent {

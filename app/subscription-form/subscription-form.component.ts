@@ -5,7 +5,7 @@ import {Component} from 'angular2/core';
   selector: 'subscription-form',
   templateUrl: 'app/subscription-form/subscription-form.html'
 })
-export class SubscriptionForm {
+export class SubscriptionFormComponent {
   frequencies = [
     { id: 1, label: 'Daily' },
     { id: 2, label: 'Weekly' },
