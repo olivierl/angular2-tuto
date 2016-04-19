@@ -66,7 +66,7 @@ System.register(['angular2/core', './courses/courses.component', './authors/auth
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <div class=\"container-fluid\">\n      <h1>My First Angular 2 App</h1>\n      <hr>\n      <change-password-form></change-password-form>\n      <hr>\n      <subscription-form></subscription-form>\n      <hr>\n      <courses></courses>\n      <authors></authors>\n      <hr>\n      <favorite [is-favorite]=\"isFavorite\" (change)=\"onChange($event)\"></favorite>\n      <hr>\n      <like [iLike]=\"tweet.iLike\" [totalLikes]=\"tweet.totalLikes\"></like>\n      <hr>\n      <voter [voteCount]=\"subject.voteCount\" [myVote]=\"subject.myVote\" (vote)=\"onVote($event)\"></voter>\n      <hr>\n      <tweets></tweets>\n      <hr>\n      <zippy title=\"This is the title\">\n        Here is the content\n      </zippy>\n    </div>\n  ",
+                        templateUrl: './app/app.component.html',
                         directives: [
                             courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,

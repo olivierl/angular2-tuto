@@ -11,30 +11,7 @@ import {ChangePasswordFormComponent} from './change-password-form/change-passwor
 
 @Component({
   selector: 'my-app',
-  template: `
-    <div class="container-fluid">
-      <h1>My First Angular 2 App</h1>
-      <hr>
-      <change-password-form></change-password-form>
-      <hr>
-      <subscription-form></subscription-form>
-      <hr>
-      <courses></courses>
-      <authors></authors>
-      <hr>
-      <favorite [is-favorite]="isFavorite" (change)="onChange($event)"></favorite>
-      <hr>
-      <like [iLike]="tweet.iLike" [totalLikes]="tweet.totalLikes"></like>
-      <hr>
-      <voter [voteCount]="subject.voteCount" [myVote]="subject.myVote" (vote)="onVote($event)"></voter>
-      <hr>
-      <tweets></tweets>
-      <hr>
-      <zippy title="This is the title">
-        Here is the content
-      </zippy>
-    </div>
-  `,
+  templateUrl: './app/app.component.html',
   directives: [
     CoursesComponent,
     AuthorsComponent,
